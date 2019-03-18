@@ -79,5 +79,12 @@
     </div>
     <!-- JS 脚本 -->
     <script src="{{ mix('js/app.js') }}"></script>
+    <script>
+    var filters = {!! json_encode($filters) !!};
+    $(document).ready(function () {
+        $('.form-horizontal input[name=name]').val(filters.name);
+        $('.form-horizontal input[name=volunteer]').val(filters.volunteer);
+    });
+  </script>
 </body>
 </html>
