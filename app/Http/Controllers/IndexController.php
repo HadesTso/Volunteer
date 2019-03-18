@@ -21,7 +21,7 @@ class IndexController extends Controller
             $volunteerData = '';
         }
 
-        return view('index', ['volunteer' => $volunteer]);
+        return view('index', ['volunteer' => $volunteerData]);
     }
 
     public function maike()

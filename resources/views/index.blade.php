@@ -39,37 +39,37 @@
                         </div>
                       </form>
                         @if($volunteer)
-                      <div class="col-sm-10 offset-lg-1" style="margin-top: 40px; background-color: #f3f3f3; font-family: 'Nunito', sans-serif; font-size: 16px;">
-                        <div class="form-group" style="padding-top: 20px;">
-                            <label class="control-label col-sm-4">用户：{{ $volunteer['name'] }}</label>
-                        </div>
-                          <div class="form-group">
-                            <label class="control-label col-sm-4">会员识别号：{{ $volunteer['member'] }}</label>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-sm-4">义工编号：{{ $volunteer['volunteer'] }}</label>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-sm-4">身份证号码：{{ $volunteer['idcard'] }}</label>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-sm-4">第一年度累计总积分：{{ $volunteer['first_total_integral'] }}</label>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-sm-4">第一年有效期：{{ $volunteer['first_validity'] }}</label>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-sm-4">第二年度累计总积分：{{ $volunteer['second_total_integral'] }}</label>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-sm-4">第二年有效期：{{ $volunteer['second_validity'] }}</label>
-                        </div>
-                        <div class="form-group" style="padding-bottom: 20px; text-align: center;">
-                            <div class="col-sm-offset-6 col-sm-3">
-                                <button type="button" class="btn btn-primary"><a href="{{ route('maike') }}" style="color: #ffffff;">报 名</a></button>
+                        <div class="col-sm-10 offset-lg-1" style="margin-top: 40px; background-color: #f3f3f3; font-family: 'Nunito', sans-serif; font-size: 16px;">
+                            <div class="form-group" style="padding-top: 20px;">
+                                <label class="control-label col-sm-4">用户：{{ $volunteer['name'] }}</label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-4">会员识别号：{{ $volunteer['member'] }}</label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-4">义工编号：{{ $volunteer['volunteer'] }}</label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-4">身份证号码：{{ $volunteer['idcard'] }}</label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-4">第一年度累计总积分：{{ $volunteer['first_total_integral'] }}</label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-4">第一年有效期：{{ $volunteer['first_validity'] }}</label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-4">第二年度累计总积分：{{ $volunteer['second_total_integral'] }}</label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-4">第二年有效期：{{ $volunteer['second_validity'] }}</label>
+                            </div>
+                            <div class="form-group" style="padding-bottom: 20px; text-align: center;">
+                                <div class="col-sm-offset-6 col-sm-3">
+                                    <button type="button" class="btn btn-primary"><a href="{{ route('maike') }}" style="color: #ffffff;">报 名</a></button>
+                                </div>
                             </div>
                         </div>
-                      </div>
                         @endif
                     </div>
                   </div>
