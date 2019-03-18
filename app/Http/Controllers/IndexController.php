@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Volunteer;
+use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
