@@ -12,4 +12,4 @@
 */
 
 Route::get('/', 'IndexController@index');
-Route::get('/import', 'IndexController@import');
+Route::get('/maike', 'IndexController@maike')->name('maike');

@@ -24,58 +24,53 @@
                     </div>
                     <div class="card-body">
                       <form class="form-horizontal" role="form">
-                          <div class="form-group">
-                              <div class="col-sm-10  offset-lg-1">
-                                <select name="order" class="form-control form-control-lg">
-                                    <option value="">排序方式</option>
-                                    <option value="member">会员识别号</option>
-                                    <option value="idcard">身份证号码</option>
-                                    <option value="phone">手机号码</option>
-                                    <option value="volunteer">义工编号</option>
-                                </select>
-                              </div>
-                          </div>
                         <div class="form-group">
                             <div class="col-md-10  offset-lg-1">
-                                <input type="text" class="form-control form-control-lg" name="search" placeholder="搜索">
+                                <input type="text" class="form-control form-control-lg" name="name" placeholder="姓名">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10  offset-lg-1">
+                                <input type="text" class="form-control form-control-lg" name="volunteer" placeholder="义工编号">
                             </div>
                         </div>
                         <div class="form-group text-center">
                             <button type="submit" class="btn btn-primary btn-lg">搜索</button>
                         </div>
                       </form>
-                      <div role="tabpanel" class="tab-pane" id="product-reviews-tab" style="margin-top: 40px;">
-                          <!-- 评论列表开始 -->
-                          <table class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                              <td>用户</td>
-                              <td>会员识别号</td>
-                              <td>义工编号</td>
-                              <td>身份证号码</td>
-                              <td>第一年度累计总积分</td>
-                              <td>第一年有效期</td>
-                              <td>第二年度累计总积分</td>
-                              <td>第二年有效期</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @if($volunteer)
-                              <tr>
-                                <td>{{ $volunteer['name'] }}</td>
-                                <td>{{ $volunteer['member'] }}</td>
-                                <td>{{ $volunteer['volunteer'] }}</td>
-                                <td>{{ $volunteer['idcard'] }}</td>
-                                <td>{{ $volunteer['first_total_integral'] }}</td>
-                                <td>{{ $volunteer['first_validity'] }}</td>
-                                <td>{{ $volunteer['second_total_integral'] }}</td>
-                                <td>{{ $volunteer['second_validity'] }}</td>
-                              </tr>
-                            @endif
-                            </tbody>
-                          </table>
-                          <!-- 评论列表结束 -->
+                        @if($volunteer)
+                      <div class="col-sm-10 offset-lg-1" style="margin-top: 40px; background-color: #f3f3f3; font-family: 'Nunito', sans-serif; font-size: 16px;">
+                        <div class="form-group" style="padding-top: 20px;">
+                            <label class="control-label col-sm-4">用户：{{ $volunteer['name'] }}</label>
                         </div>
+                          <div class="form-group">
+                            <label class="control-label col-sm-4">会员识别号：{{ $volunteer['member'] }}</label>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">义工编号：{{ $volunteer['volunteer'] }}</label>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">身份证号码：{{ $volunteer['idcard'] }}</label>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">第一年度累计总积分：{{ $volunteer['first_total_integral'] }}</label>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">第一年有效期：{{ $volunteer['first_validity'] }}</label>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">第二年度累计总积分：{{ $volunteer['second_total_integral'] }}</label>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">第二年有效期：{{ $volunteer['second_validity'] }}</label>
+                        </div>
+                        <div class="form-group" style="padding-bottom: 20px; text-align: center;">
+                            <div class="col-sm-offset-6 col-sm-3">
+                                <button type="button" class="btn btn-primary"><a href="{{ route('maike') }}" style="color: #ffffff;">报 名</a></button>
+                            </div>
+                        </div>
+                      </div>
+                        @endif
                     </div>
                   </div>
                 </div>

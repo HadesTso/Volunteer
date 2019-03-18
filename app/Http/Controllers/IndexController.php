@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Volunteer;
-use Illuminate\Http\Request;
-use Maatwebsite\Excel\Excel;
 
 class IndexController extends Controller
 {
@@ -22,5 +20,10 @@ class IndexController extends Controller
         ])->first();
 
         return view('index', ['volunteer' => $volunteer]);
+    }
+
+    public function maike()
+    {
+        return view('maike');
     }
 }
