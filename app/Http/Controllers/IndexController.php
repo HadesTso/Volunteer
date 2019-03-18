@@ -9,16 +9,17 @@ class IndexController extends Controller
 {
     public function index(Request $request, Volunteer $volunteerModel)
     {
-        $order = $request->input('order', null);
-        $search = $request->input('search', null);
+        $name = $request->input('name', null);
+        $volunteer = $request->input('volunteer', null);
 
-        if (!$order){
-            $order = 'id';
+        if ($volunteer && $name) {
+            $volunteerData = $volunteerModel->where([
+                'name' => $name,
+                'volunteer' => $volunteer,
+            ])->first();
+        }else{
+            $volunteerData = '';
         }
-
-        $volunteer = $volunteerModel->where([
-            $order => $search
-        ])->first();
 
         return view('index', ['volunteer' => $volunteer]);
     }
